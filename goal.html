@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Goal</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+      background: url('bg1.jpg') no-repeat center center/cover;
+      color: #fff;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      font-weight: bold;
+	     letter-spacing: 1px;
+      color: white;
+    }
+
+    .logo-img {
+      height: 40px;
+      width: 40px;
+      margin-right: 10px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #bbb;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover, nav a.active {
+      color: red;
+    }
+
+    section.body {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px 50px;
+      height: calc(100vh - 90px); 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .slideshow-container {
+      width: 45%;
+      max-height: 450px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .fade {
+      animation: fade 2s ease-in-out;
+    }
+
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+
+    .info-section {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      animation: slideIn 1s ease forwards;
+    }
+
+.info-box {
+  background-color: rgba(0, 0, 0, 0.9); 
+  padding: 20px;
+  border-left: 5px solid red;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.6); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+
+
+   .info-box:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.18); 
+  box-shadow: 0 0 16px rgba(255, 0, 0, 0.6), 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+    h1 {
+      font-size: 45px;
+      margin-bottom: 15px;
+      color: #fff;
+      text-align: left;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @media (max-width: 950px) {
+      section.body {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 20px;
+      }
+
+      .slideshow-container,
+      .info-section {
+        width: 100%;
+      }
+
+      .slideshow-container {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="logo.jpg" alt="Gym Logo" class="logo-img" />
+    ED & JEM'S FITNESS GYM
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="membership.html">Membership Fees</a>
+    <a href="table.html">Membership Lists</a>
+    <a href="goal.html" class="active">Goal</a>
+    <a href="aboutus.html">About Us</a>
+  </nav>
+</header>
+
+<section class="body">
+  <div class="slideshow-container">
+    <img class="slide fade" src="gym1.jpg" alt="Workout Area">
+    <img class="slide fade" src="gym2.jpeg" alt="Group Training">
+    <img class="slide fade" src="gym3.jpg" alt="Equipment Zone">
+  </div>
+
+  <div class="info-section">
+    <h1>Our Goal</h1>
+    <div class="info-box">
+      <strong> Mission:</strong> To empower individuals to transform their bodies and minds through dedication, innovation, and support.
+    </div>
+    <div class="info-box">
+      <strong> Vision:</strong> To be the fitness hub where every member feels stronger, healthier, and motivated every day.
+    </div>
+    <div class="info-box">
+      <strong> Core Values:</strong> Passion, Consistency, Respect, Unity, and Growth.
+    </div>
+  </div>
+</section>
+
+<script>
+  let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    const slides = document.getElementsByClassName("slide");
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }    
+    slides[slideIndex-1].style.display = "block";  
+    setTimeout(showSlides, 3000);
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fitness Club</title>
+  <style>
+    * {
+     margin: 0;
+     padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+     background: url('bg.jpg') no-repeat center center/cover;
+      color: #fff;
+    }
+ 
+
+    header {
+     background-color: rgba(0, 0, 0, 0.8);
+     padding: 20px 50px;
+     display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+
+  .logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.logo-img {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+.logo span {
+  transform: translateY(-3px);
+  display: inline-block;
+}
+
+    nav a {
+      margin: 0 15px;
+     text-decoration: none;
+      color: #bbb;
+     font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover, nav a.active {
+      color: red;
+    }
+
+   .hero {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+ 
+  padding: 80px 50px 43px;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.2));
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  text-align: left;
+  max-width: 600px;
+  z-index: 1;
+}
+
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+  animation: fadeInUp 1s ease-out;
+  text-shadow: 0 0 8px red, 0 0 15px rgba(255, 0, 0, 0.1);
+}
+
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+    .hero-logo {
+      width: fit-content;
+      margin-bottom: 20px;
+      margin-left: 120px;
+      margin-right: auto;
+    }
+
+    .hero-logo img {
+      height: 230px;
+      display: block;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+
+    .join-btn {
+       background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-left: 170px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 77, 77, 0.5);
+  animation: pulseBtn 2s infinite;
+    }
+@keyframes pulseBtn {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 77, 77, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 77, 77, 1);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 77, 77, 0.5);
+  }
+}
+    .join-btn:hover {
+      background: #cc0000;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 36px;
+      }
+	  
+      .hero-logo img {
+        height: 80px;
+      }
+    } 
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo"> <img src="logo.jpg" alt="Gym Logo" class="logo-img" /> ED & JEM'S FITNESS GYM</div>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="membership.html">Membership Fees</a>
+      <a href="table.html">Membership Lists</a>
+      <a href="goal.html">Goal</a>
+      <a href="aboutus.html">About Us</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-logo">
+        <img src="logo.jpg" alt="Fitness Logo" />
+      </div>
+      <h1>NO PAIN .. NO GAIN</h1>
+      <p>Ready to transform your body and boost your confidence? Our expert trainers and state-of-the-art facilities are here to support you every step of the way. Join now and become part of our fitness family—your journey to a healthier, stronger you starts today!</p>
+      <button class="join-btn" onclick="location.href='membership.html'">Join us now!</button>
+    </div>
+  </section>
+
+</body>
+</html>

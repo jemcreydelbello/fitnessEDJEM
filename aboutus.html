@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+      background: url('bg1.jpg') no-repeat center center/cover;
+      color: #fff;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: white;
+    }
+
+    .logo-img {
+      height: 40px;
+      width: 40px;
+      margin-right: 10px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #bbb;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover, nav a.active {
+      color: red;
+    }
+
+    section.body {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px 50px;
+      min-height: calc(100vh - 90px);
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 30px;
+      animation: fadeIn 1s ease;
+      text-align: left;
+    }
+
+    .profile-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      animation: slideUp 1s ease;
+    }
+
+    .profile-card {
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 20px;
+      border-left: 5px solid red;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(255, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.6);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+      width: 300px;
+      text-align: left;
+    }
+
+    .profile-card:hover {
+      transform: translateY(-5px);
+      background-color: rgba(255, 255, 255, 0.18);
+      box-shadow: 0 0 16px rgba(255, 0, 0, 0.6), 0 10px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .profile-card img {
+      width: 100%;
+      max-width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 3px solid red;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .profile-card p {
+      margin: 6px 0;
+      font-size: 15px;
+      line-height: 1.4;
+    }
+
+    .profile-card strong {
+      color: #ff6961;
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .profile-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .profile-card {
+        width: 90%;
+      }
+    }
+	
+	  h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease;
+    text-align: center; 
+  }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="logo.jpg" alt="Gym Logo" class="logo-img" />
+    ED & JEM'S FITNESS GYM
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="membership.html">Membership Fees</a>
+    <a href="table.html">Membership Lists</a>
+    <a href="goal.html">Goal</a>
+    <a href="aboutus.html" class="active">About Us</a>
+  </nav>
+</header>
+
+<section class="body">
+  <h1>About Us</h1>
+  <div class="profile-container">
+    <div class="profile-card">
+      <img src="ed.jpg" alt="Edrian C. Dela Pena">
+      <p><strong>Name:</strong> Edrian C. Dela Pena</p>
+      <p><strong>Age:</strong> 20</p>
+      <p><strong>Course/Section:</strong> BSIT 3B-G1</p>
+      <p><strong>School:</strong> Bulacan State University</p>
+      <p><strong>Role:</strong> I developed the logical connections and CRUD functionality of this website.</p>
+    </div>
+    <div class="profile-card">
+      <img src="jem.jpg" alt="Jem Creydel Bello">
+      <p><strong>Name:</strong> Jem Creydel Bello</p>
+      <p><strong>Age:</strong> 20</p>
+      <p><strong>Course/Section:</strong> BSIT 3B-G1</p>
+      <p><strong>School:</strong> Bulacan State University</p>
+      <p><strong>Role:</strong> I enhanced the user interface and added interactive features to the website.</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
